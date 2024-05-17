@@ -19,6 +19,30 @@ return {
     local cmp = require("cmp")
 
     local luasnip = require("luasnip")
+    local s = luasnip.snippet
+    local t = luasnip.text_node
+    local i = luasnip.insert_node
+    
+    luasnip.add_snippets("cpp", {
+      s("cpp", {
+        t({'#include <iostream>',
+        'using namespace std;',
+        '',
+        'int main()',
+        '{',
+        '\t',
+      }),
+      i(0),
+      t({
+        "",
+        "",
+        "\treturn 0;",
+        "}"
+      })
+    })
+  })
+
+
 
     local lspkind = require("lspkind")
 
