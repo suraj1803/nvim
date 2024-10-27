@@ -1,4 +1,10 @@
 vim.cmd("let g:netrw_liststyle = 3")
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    vim.opt.laststatus = 3
+  end,
+})
+
 
 local opt = vim.opt
 
