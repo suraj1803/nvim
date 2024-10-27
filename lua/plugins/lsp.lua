@@ -33,6 +33,7 @@ return {
           "lua_ls",
           "emmet_ls",
           "pyright",
+          "clangd",
         },
       })
 
@@ -44,6 +45,7 @@ return {
           "black", -- python formatter
           "pylint",
           "eslint_d",
+          "clang-format"
         },
       })
     end,
